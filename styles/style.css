@@ -17,14 +17,14 @@ body{
   justify-content: space-between;
   align-items: center;
   padding: 30px 200px;
-  background-color: #412567;
+  background-color: #1A0B2E;
   border-bottom:1px solid  #5d5c5c;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
 }
 .logo{
   font-size: 1.8rem;
   font-weight: bold;
-  color: #ffff;
+  color: #FFFFFF;
 }
 .logo span{
   color: linear-gradient(90deg, #ff00ff, #8a2be2);
@@ -54,3 +54,93 @@ body{
   text-decoration: none;
 }
 
+/* take-wave-section styles */
+.take-wave-section{
+  height: 760px;
+  width: 100%;
+  background-color: #412567;
+  background-image: url(../assets/hero-bg.png);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+}
+.mic-container{
+position: relative;
+display: inline-block;
+margin-bottom: 20px;
+}
+.mice-circle{
+  width: 350px;
+  height: 350px;
+  background-image: url(../assets/hero-circle.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.microphone-img{
+  width: 116px;
+
+}
+.badge{
+  position: absolute;
+    top: 30px;
+    right: 20px;
+    background-color: #00FF88;
+    color: #000;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 12px;
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
+}
+.title{
+  font-size:3.75rem ;
+  font-weight: bolder;
+  color: #FFFFFF;
+  margin-bottom: 8px;
+}
+.subtitle{
+  font-size:1rem ;
+  margin-bottom: 8px;
+  color: #aca8a8;
+  margin-bottom: 24px;
+}
+
+.grp-btn{
+  display: flex;
+  justify-content: center;
+  gap:10px ;
+}
+.spotify{
+  max-width: 201px;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 12.5px 20px;
+  background: linear-gradient(90deg, #ffcc33, #ff33cc, #9900ff);
+  border-radius: 50px;
+}
+.spotify-icon{
+  align-items: center;
+  margin-right: 8px;
+}
+.subscribe{
+  text-decoration: none;
+  font-size: 1 rem;
+  font-weight: 600;
+  color: #00FF88;
+  border: 1px solid #00FF88;
+  padding: 12.5px 20px;
+  border-radius: 50px;
+  
+}
+.subs-icon{
+  align-items: center;
+  margin-right: 8px;
+}
