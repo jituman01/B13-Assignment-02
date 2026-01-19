@@ -56,16 +56,11 @@ body{
   text-decoration: none;
 }
 .hamburger{
-  /* display: none; */
-  flex-direction: column;
-  gap: 5px;
+  display: none;
   cursor: pointer;
 }
-.hamburger span{
-  width: 18px;
-  height: 3px;
-  background-color: #FFFFFF;
-  border-radius: 2px;
+.hamburger img{
+  width: 24px;
 }
 /* take-wave-section styles */
 .take-wave-section{
@@ -112,6 +107,21 @@ margin-bottom: 20px;
     font-weight: bold;
     font-size: 12px;
     box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
+    animation: normal-pulse 2s infinite ease-in-out;
+}
+@keyframes normal-pulse {
+  0% {
+      transform: scale(1);
+      opacity: 1;
+  }
+  50% {
+      transform: scale(1.1);
+      opacity: 0.8;
+  }
+  100% {
+      transform: scale(1);
+      opacity: 1;
+  }
 }
 .title{
   font-size:3.75rem ;
@@ -131,6 +141,7 @@ margin-bottom: 20px;
   justify-content: center;
   gap:10px ;
 }
+
 .spotify{
   max-width: 201px;
   color: #FFFFFF;
@@ -280,29 +291,318 @@ margin-bottom: 20px;
   grid-column: span 2;
 }
 
+/* features grid section style */
+.episodes-section {
+  background-color: #1A0B2E; 
+  padding: 120px 200px;
+  color: #FFFFFF;
+}
+
+.section-title{
+  color: #FFFFFF;                
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 40px;
+}
+
+.episodes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  max-width: 380px 440px;
+  margin: 0 auto;
+}
+
+.episode-card {
+  background: #250D44;
+  border-radius: 15px;
+  max-width: 380px;
+  overflow: hidden;
+  /* transition: transform 0.3s ease; */
+}
+
+.episode-card:hover {
+  /* transform: translateY(-10px); */
+}
+
+.video {
+  position: relative;
+  padding-bottom:50% ;
+  height: 214px;
+  overflow: hidden;
+}
+
+.video iframe {
+  position: absolute;
+  /* top: 0;
+  left: 0; */
+  width: 100%;
+  height: 100%;
+  border: none;
+  z-index: 1;
+  
+}
+.video-pause-btn{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+.btn-img{
+  width: 60px;
+  height: 0;
+}
+
+.episode-content {
+  padding: 20px;
+}
+
+.episode-content h3 {
+  font-size: 1.2rem;
+  margin: 0 0 10px 0;
+  line-height: 1.4;
+}
+
+.episode-content p {
+  color: #a094b8;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
 
 
+.duration {
+  color: #00FF88; 
+  font-weight: 600;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.clock-icon {
+  margin-right: 5px;
+}
+
+/* Host section styles */
+.host-section{
+  max-width: 1200px;
+  margin-top: 120px;
+}
+.host-title{
+  font-size: 3rem;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.host-profile-card {
+  background: #250D44;
+  border: none;
+  border-radius: 40px;
+  padding: 45px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.profile-img img {
+  width: 200px;
+  height: 200px;
+}
+
+.host-details h3 { 
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom:16px ;
+ }
+
+.host-details p { 
+  font-size: 1rem;
+  color: #9c9c9d;
+  line-height: 24px; 
+  margin-bottom: 16px;
+}
+
+.social-icons {
+   display: flex; gap: 15px; margin-top: 20px; }
+
+.social-icons a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.8rem;
+  padding: 8px 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  background: black;
+}
 
 
+/* footer section styles */
+.footer-section {
+  background-image: url('../assets/footer-bg.png');
+  background-size: cover;
+  background-position: center;
+  padding: 120px 120px;
+  text-align: center;
+  color: #ffffff;
+}
 
-@media (max-width: 900px) {
-  .grid-container {
-    grid-template-columns: 1fr; 
+.footer-container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 32px;
+}
+
+.footer-logo span {
+  background: linear-gradient(90deg, #ff00ff, #8a2be2);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 32px;
+  /* flex-wrap: wrap; */
+}
+
+.footer-socials a {
+  color: #9d9d9f;
+  text-decoration: none;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* transition: color 0.3s ease; */
+}
+
+.footer-socials a:hover {
+  color: #ffffff;
+}
+
+.footer-socials a img {
+  width: 20px;
+  height: 20px;
+}
+
+
+.copyright {
+  font-size: 1rem;
+  color: #9d9d9f;
+  margin-top: 32px;
+}
+
+
+/* Responsive for Mobile  */
+
+@media screen and (max-width: 576px) {
+  /* Navbar Responsive */
+  .navbar-section {
+      padding: 20px 24px; 
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
   }
+  .nav-links ,.subs-button{
+      display: none;
+  }
+  .hamburger{
+    display: block;
+  }
+  .take-wave-section {
+      height: auto;
+      padding: 40px 20px;
+      background-size: cover;
+      
+  }
+  .mice-circle {
+      width: 200px;
+      height: 200px;
+      margin-top: 80px;
+  }
+  .microphone-img{
+    width: 46px;
+    height: 70px;
+  }
+
+  .badge {
+      top: 100px;
+      right: -10px;
+  }
+  .title {
+      font-size: 2.5rem;
+      margin-top: 20px;
+  }
+
+  .grp-btn {
+    display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 8px;
+  }
+
+  .spotify {
+      width: 100%;
+      text-align: center;
+      justify-content: center;
+  }
+
+  /* about section responsive */
+  .about-section,.techwave-grid {
+    padding: 40px 20px;
+    text-align: center;
+
+  }
+
+  .about-title, .grid-title {
+    font-size: 2rem;
+    margin-bottom: 16px;
+    
+  }
+
+  .about-description, 
+  .about-description-2 {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    color: #bab4b4;
+  }
+  .grid{
+    margin-left: 10px;
+    padding-left: 1px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr); 
+  }
+
+  /* grid section responsive */
+  .grid-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .card {
+    text-align: left;
+  }
+  
   .card-tall, .card-wide {
     grid-row: auto;
     grid-column: auto;
   }
+
 }
 
-
-
-/* Responsive for Mobile */
-@media (max-width: 576px) {
-  .stats-grid {
-      flex-direction: column;
-  }
-  .stat-number {
-      font-size: 45px;
-  }
-}
