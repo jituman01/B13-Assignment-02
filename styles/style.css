@@ -55,7 +55,18 @@ body{
   padding: 12.5px;
   text-decoration: none;
 }
-
+.hamburger{
+  /* display: none; */
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+.hamburger span{
+  width: 18px;
+  height: 3px;
+  background-color: #FFFFFF;
+  border-radius: 2px;
+}
 /* take-wave-section styles */
 .take-wave-section{
   height: 760px;
@@ -211,8 +222,83 @@ margin-bottom: 20px;
   color: #c1bfbf;
 }
 
+/* tech-wave grid styles */
+
+.techwave-grid {
+  background-color: #230E3D;
+  color: #FFFFFF;
+  padding: 40px;
+}
+
+.grid-title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  margin-top:120px ;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  max-width: 1140px;
+  margin: 0 auto;
+  margin-bottom: 120px;
+}
+
+.card {
+  background: #351165;
+  padding: 40px;
+  border-radius: 40px;
+}
+
+.icon img{
+  max-width: 60px;
+  margin-bottom: 16px;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #FFFFFF;
+  margin-bottom: 16px;
+}
+
+.card p {
+   font-size: 1rem;
+  color: #b1a7c7;
+  line-height: 24px;
+ 
+}
+
+.card-tall {
+  padding: 107px 40px;
+  grid-row: span 2;
+}
+.card-wide {
+  grid-column: span 2;
+}
+
+
+
+
+
+
+@media (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: 1fr; 
+  }
+  .card-tall, .card-wide {
+    grid-row: auto;
+    grid-column: auto;
+  }
+}
+
+
+
 /* Responsive for Mobile */
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .stats-grid {
       flex-direction: column;
   }
